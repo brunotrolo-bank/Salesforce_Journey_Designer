@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/brunotrolo/Salesforce_Journey_Designer?style=flat-square&color=00A1E0&label=stars" alt="Stars">
+  <img src="https://img.shields.io/github/stars/brunotrolo-bank/Salesforce_Journey_Designer?style=flat-square&color=00A1E0&label=stars" alt="Stars">
   <img src="https://img.shields.io/badge/agentes-6-04E1CB?style=flat-square" alt="6 agentes">
   <img src="https://img.shields.io/badge/m%C3%A9todo-Spec--Driven%20Development-032D60?style=flat-square" alt="Spec-Driven Development">
   <img src="https://img.shields.io/badge/works%20with-Claude%20Code-032D60?style=flat-square" alt="Works with Claude Code">
@@ -77,12 +77,12 @@ Rode **de dentro da pasta do seu projeto**:
 
 **Windows (PowerShell):**
 ```powershell
-git clone --depth 1 https://github.com/brunotrolo/Salesforce_Journey_Designer.git .jf-tmp; New-Item -ItemType Directory -Force .claude,docs,specs | Out-Null; if (Test-Path .claude\settings.json) { Move-Item -Force .claude\settings.json .claude\settings.json.anterior }; Copy-Item -Recurse -Force .jf-tmp\.claude\* .claude\; Copy-Item -Recurse -Force .jf-tmp\docs\* docs\; Copy-Item -Recurse -Force .jf-tmp\specs\* specs\; Remove-Item -Recurse -Force .jf-tmp; Push-Location .claude\skills\salesforce-ux\design-system-2-starter-kit; npm install; Pop-Location
+git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp; New-Item -ItemType Directory -Force .claude,docs,specs | Out-Null; if (Test-Path .claude\settings.json) { Move-Item -Force .claude\settings.json .claude\settings.json.anterior }; Copy-Item -Recurse -Force .jf-tmp\.claude\* .claude\; Copy-Item -Recurse -Force .jf-tmp\docs\* docs\; Copy-Item -Recurse -Force .jf-tmp\specs\* specs\; Remove-Item -Recurse -Force .jf-tmp; Push-Location .claude\skills\salesforce-ux\design-system-2-starter-kit; npm install; Pop-Location
 ```
 
 **Mac / Linux / Git Bash:**
 ```bash
-git clone --depth 1 https://github.com/brunotrolo/Salesforce_Journey_Designer.git .jf-tmp && mkdir -p .claude docs specs && { [ -f .claude/settings.json ] && mv .claude/settings.json .claude/settings.json.anterior; :; } && cp -r .jf-tmp/.claude/. .claude/ && cp -r .jf-tmp/docs/. docs/ && cp -r .jf-tmp/specs/. specs/ && rm -rf .jf-tmp && (cd .claude/skills/salesforce-ux/design-system-2-starter-kit && npm install)
+git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp && mkdir -p .claude docs specs && { [ -f .claude/settings.json ] && mv .claude/settings.json .claude/settings.json.anterior; :; } && cp -r .jf-tmp/.claude/. .claude/ && cp -r .jf-tmp/docs/. docs/ && cp -r .jf-tmp/specs/. specs/ && rm -rf .jf-tmp && (cd .claude/skills/salesforce-ux/design-system-2-starter-kit && npm install)
 ```
 
 Isso traz os **agentes** (`.claude/agents/`), as **skills** (`.claude/skills/`), as **rules e permissões** (`.claude/rules/`, `.claude/settings.json` — ver a tabela abaixo) e o **scaffold de governança** (`docs/sdd/`, `docs/design-system/`, `specs/`) — e já deixa o ambiente de protótipo LWC/SLDS2 instalado (`npm install` roda automaticamente; precisa de Node.js ≥ 20 e internet, ver pré-requisitos acima). Se preferir clonar o repositório e trabalhar dentro dele em vez de usar este comando, rode `npm install` em `.claude/skills/salesforce-ux/design-system-2-starter-kit/` manualmente uma vez. Também dá para pular esse passo: `fsc-html-prototyper` detecta que falta e instala sozinho na primeira vez que precisar (ver nota abaixo).
@@ -198,7 +198,7 @@ Detalhes e o texto normativo em [`docs/sdd/constitution.md`](./docs/sdd/constitu
 ---
 
 <p align="center">
-  ⭐ <b><a href="https://github.com/brunotrolo/Salesforce_Journey_Designer/stargazers">Dê uma star no repo</a></b> para ser avisado quando novas skills e melhorias saírem.
+  ⭐ <b><a href="https://github.com/brunotrolo-bank/Salesforce_Journey_Designer/stargazers">Dê uma star no repo</a></b> para ser avisado quando novas skills e melhorias saírem.
 </p>
 
 <p align="center">
@@ -211,5 +211,5 @@ Detalhes e o texto normativo em [`docs/sdd/constitution.md`](./docs/sdd/constitu
 </p>
 
 <p align="center">
-  <sub>Orquestração, constituição e processo de SDD © <a href="https://github.com/brunotrolo">brunotrolo</a> · <a href="./LICENSE">MIT</a>. Skills importadas redistribuídas sob suas licenças originais (ver <code><a href="./.claude/skills/README.md">.claude/skills/README.md</a></code>).</sub>
+  <sub>Orquestração, constituição e processo de SDD © <a href="https://github.com/brunotrolo-bank">brunotrolo-bank</a> · <a href="./LICENSE">MIT</a>. Skills importadas redistribuídas sob suas licenças originais (ver <code><a href="./.claude/skills/README.md">.claude/skills/README.md</a></code>).</sub>
 </p>
