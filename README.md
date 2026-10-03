@@ -82,7 +82,14 @@ git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Design
 
 **Mac / Linux / Git Bash:**
 ```bash
-git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp && mkdir -p .claude docs specs && { [ -f .claude/settings.json ] && mv .claude/settings.json .claude/settings.json.anterior; :; } && cp -r .jf-tmp/.claude/. .claude/ && cp -r .jf-tmp/docs/. docs/ && cp -r .jf-tmp/specs/. specs/ && rm -rf .jf-tmp && (cd .claude/skills/salesforce-ux/design-system-2-starter-kit && npm install)
+git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp \
+  && mkdir -p .claude docs specs \
+  && { [ -f .claude/settings.json ] && mv .claude/settings.json .claude/settings.json.anterior; :; } \
+  && cp -r .jf-tmp/.claude/. .claude/ \
+  && cp -r .jf-tmp/docs/. docs/ \
+  && cp -r .jf-tmp/specs/. specs/ \
+  && rm -rf .jf-tmp \
+  && (cd .claude/skills/salesforce-ux/design-system-2-starter-kit && npm install)
 ```
 
 Isso traz os **agentes** (`.claude/agents/`), as **skills** (`.claude/skills/`), as **rules e permissões** (`.claude/rules/`, `.claude/settings.json` — ver a tabela abaixo) e o **scaffold de governança** (`docs/sdd/`, `docs/design-system/`, `specs/`) — e já deixa o ambiente de protótipo LWC/SLDS2 instalado (`npm install` roda automaticamente; precisa de Node.js ≥ 20 e internet, ver pré-requisitos acima). Se preferir clonar o repositório e trabalhar dentro dele em vez de usar este comando, rode `npm install` em `.claude/skills/salesforce-ux/design-system-2-starter-kit/` manualmente uma vez. Também dá para pular esse passo: `fsc-html-prototyper` detecta que falta e instala sozinho na primeira vez que precisar (ver nota abaixo).
