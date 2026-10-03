@@ -75,12 +75,7 @@ Ao final, cada capacidade tem cinco artefatos na própria pasta — e o critéri
 
 Rode **de dentro da pasta do seu projeto**:
 
-**Windows (PowerShell):**
-```powershell
-git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp; New-Item -ItemType Directory -Force .claude,docs,specs | Out-Null; if (Test-Path .claude\settings.json) { Move-Item -Force .claude\settings.json .claude\settings.json.anterior }; Copy-Item -Recurse -Force .jf-tmp\.claude\* .claude\; Copy-Item -Recurse -Force .jf-tmp\docs\* docs\; Copy-Item -Recurse -Force .jf-tmp\specs\* specs\; Remove-Item -Recurse -Force .jf-tmp; Push-Location .claude\skills\salesforce-ux\design-system-2-starter-kit; npm install; Pop-Location
-```
-
-**Mac / Linux / Git Bash:**
+**Windows (PowerShell) / Mac / Linux / Git Bash:**
 ```bash
 git clone --depth 1 https://github.com/brunotrolo-bank/Salesforce_Journey_Designer.git .jf-tmp \
   && mkdir -p .claude docs specs \
